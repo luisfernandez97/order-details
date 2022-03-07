@@ -1,0 +1,168 @@
+//---------------Mixin Containers---------------
+
+//Secondary Container Layout
+@mixin secondary-container {
+    padding: 24px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: $neutral-color-gray;
+    border: 1px solid $secondary-color-gray-500;
+    margin-bottom: 24px;
+    @media (max-width: $mobile-queries){
+        padding: 16px;
+        margin-bottom: 8px;
+    }
+}
+//Secondary Container Header
+@mixin secondary-container-header {
+    h2{
+        font-family: $bold-font;
+        font-size: 18px;
+        margin: 0;
+        @media (max-width: $mobile-queries){
+            font-size: 16px;
+        }
+    }
+}
+
+
+//---------------UI Containers---------------
+// Secondary Container
+.container-secondary{
+    @include secondary-container;
+    &__header{
+        @include flex-display(row);
+        @include secondary-container-header;
+        justify-content: space-between;
+        .id-mobile{
+            display: none;
+            @media (max-width: $mobile-queries){
+                font-family: $regular-font;
+                font-size: $mob-caption;
+                display: flex;
+            } 
+        }
+                     
+    }
+    &__info{
+        @include flex-display(row);
+        justify-content: space-between;
+        align-items: start;
+        gap: 24px;
+        @media (max-width: $mobile-queries){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+        .info-item{
+            @include flex-display(row);
+            gap: 4px;
+            width: 100%;
+            justify-content: start;
+            @media (max-width: $mobile-queries){
+                flex-direction: column;
+                align-items: start;
+            } 
+            &__label{
+                font-family: $regular-font;
+                font-size: $text3;
+                margin: 0;
+                @media (max-width: $mobile-queries){
+                    font-size: $mob-text3;
+                } 
+            }
+            &__content{
+                font-family: $bold-font;
+                font-size: 16px;
+                margin: 0;
+                @media (max-width: $mobile-queries){
+                    font-size: $mob-text3;                    
+                } 
+            }
+            .item__tag{
+                @include tag($secondary-color-yellow-600);
+                .circle{
+                    @include circle-status($secondary-color-yellow-700)
+                }                  
+            }
+        }
+        .id-desktop{
+            @extend .info-item;
+            @media (max-width: $mobile-queries){
+                display: none;
+            } 
+        }
+        .membership-item{
+            @include flex-display(column);
+            align-items: start;
+            gap: 0;
+            .info-item{
+                @extend .info-item;
+                &__content{
+                    @extend .info-item__content;
+                }
+            }
+            &__price, p{
+                margin: 0;
+                font-family: $regular-font;
+                font-size: 14px;
+            }
+        }
+    }
+    .membership-card{
+        @media (max-width: $mobile-queries){
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            // grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+    }
+    .membership-item {
+        width: 100%;
+        &__info{
+            @include flex-display(row);
+            gap: 4px;
+        }
+    }
+}
+
+// Secondary Container Resumen
+.container-secondary-resumen{
+    @include secondary-container;
+    &__header{
+        @include secondary-container-header;      
+    }
+    &__list-items{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        .resumen-item, .resumen-item-discount, p{
+            display: flex;
+            justify-content: space-between;
+            font-family: $regular-font;
+            font-size: $text3;
+            margin: 0;
+            @media (max-width: $mobile-queries){
+                font-size: $mob-text3;
+            }        
+        }    
+        .resumen-item-discount > p:last-child{
+            @extend .resumen-item;
+            font-family: $bold-font;
+            font-size: $text3;
+            color: $primary-color-orange;      
+        }
+        .resumen-item:last-child > p{
+            font-size: $text2;
+            font-family: $bold-font;
+            margin: 0;
+            @media (max-width: $mobile-queries){
+                font-size: $mob-text2;
+            }
+        }
+    }
+}

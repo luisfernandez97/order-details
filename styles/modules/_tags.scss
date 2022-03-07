@@ -1,0 +1,21 @@
+@mixin tag ($color-tag) {
+    font-family: $regular-font;
+    font-size: $caption;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: $color-tag;
+    @media (max-width: $mobile-queries){
+        font-size: $mob-caption;
+    }
+}
+
+@mixin circle-status ($color-circle){
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $color-circle;
+}     

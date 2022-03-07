@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="dashboard-main">
+        <div class="main-header">
+            <div class="main-header__title">
+                <box-icon name='left-arrow-alt'></box-icon>
+                <h1>Detalles del pedido</h1>
+            </div>
+            <div class="main-header__support">
+                <p>¿Necesitas ayuda?</p>
+                <a href="#">Contactar host</a>
+            </div>
+        </div>
+        <!-- Order information -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Información del pedido</h2>
+                <p class="id-mobile">ID: 0000000</p>
+            </div>
+            <div class="container-secondary__info">
+                <div class="info-item id-desktop">
+                    <p class="info-item__label">ID:</p>
+                    <p class="info-item__content">000000</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-item__label">Estatus del pedido:</p>
+                    <div class="item__tag">
+                        <div class="circle"></div>
+                        Abierto
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-item__label">Fecha:</p>
+                    <p class="info-item__content">Martes, 22 Feb 2022</p>
+                </div>
+            </div>
+        </div>
+        <!-- Order details -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Detalles del envío</h2>
+            </div>
+            <div class="container-secondary__info">
+                <div class="info-item">
+                    <p class="info-item__label">Día de entrega del plan:</p>
+                    <p class="info-item__content">Martes</p>
+                </div>
+                
+                <div class="info-item">
+                    <p class="info-item__label">Horario de entrega:</p>
+                    <p class="info-item__content">9:00 AM - 12:00 PM</p>
+                </div>
+            </div>
+            <div class="container-secondary__info">
+                <div class="info-item">
+                    <p class="info-item__label">Dirección de entrega:</p>
+                    <p class="info-item__content">Av. 19 # 116-15, Apto 3, Bogotá</p>
+                </div>
+                
+                <div class="info-item">
+                    <p class="info-item__label">Primer día de entrega:</p>
+                    <p class="info-item__content">Martes 22 enero</p>
+                </div>
+            </div>
+        </div>
+        <!-- Payment info -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Información del pago</h2>
+            </div>
+            <div class="container-secondary__info">
+                <div class="info-item">
+                    <p class="info-item__label">Método:</p>
+                    <p class="info-item__content">Efectivo</p>
+                </div>
+
+                <div class="info-item">
+                    <p class="info-item__label">Estatus del Pago:</p>
+                    <div class="item__tag">
+                        <div class="circle"></div>
+                        Pendiente
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <p class="info-item__label">Fecha:</p>
+                    <p class="info-item__content">Pago pendiente</p>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Membership details -->
+        <div class="container-secondary">
+            <div class="container-secondary__header">
+                <h2>Plan de alimentación</h2>
+            </div>
+            <div class="container-secondary__info membership-card">
+                <div class="membership-item">
+                    <div class="membership-item__info">
+                        <p class="info-item__label">Cant. Personas:</p>
+                        <p class="info-item__content">6</p>
+                    </div>
+                </div>
+                
+                <div class="membership-item">
+                    <div class="membership-item__info">
+                        <p class="info-item__label">Almuerzos:</p>
+                        <p class="info-item__content">6</p>
+                    </div>
+                    <p class="membership-item__price">$11.900 c/u</p>
+                </div>
+
+                <div class="membership-item">
+                    <div class="membership-item__info">
+                        <p class="info-item__label">Cenas:</p>
+                        <p class="info-item__content">6</p>
+                    </div>
+                    <p class="membership-item__price">$12.900 c/u</p>
+                </div>
+
+                <div class="membership-item">
+                    <div class="membership-item__info">
+                        <p class="info-item__label">Batidos:</p>
+                        <p class="info-item__content">2</p>
+                    </div>
+                    <p class="membership-item__price">$2.100 c/u</p>
+                </div>
+
+                <div class="membership-item">
+                    <div class="membership-item__info">
+                        <p class="info-item__label">Snacks:</p>
+                        <p class="info-item__content">No incluye</p>
+                    </div>
+                    <p class="membership-item__price">No incluye</p>
+                </div>
+                
+            </div>
+            
+        </div>
+        <!-- Resumen -->
+        <div class="container-secondary-resumen">
+            <div class="container-secondary-resumen__header">
+                <h2>Resumen</h2>
+            </div>
+            <div class="container-secondary-resumen__list-items">
+                <div class="resumen-item">
+                    <p>Subtotal</p>
+                    <p>$128.500</p>
+                </div>
+                <div class="resumen-item">
+                    <p>Platos Premium</p>
+                    <p>$7.500</p>
+                </div>
+                <div class="resumen-item">
+                    <p>Domicilio</p>
+                    <p>GRATIS</p>
+                </div>
+                <div class="resumen-item-discount">
+                    <p>Descuentos (${couponName})</p>
+                    <p>$20.000</p>
+                </div>
+                <div class="resumen-item">
+                    <p>Total</p>
+                    <p>$138.000</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
+</body>
+</html>

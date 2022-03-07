@@ -1,0 +1,94 @@
+// Fonts
+@font-face {
+    font-family: 'Goldplay-Bold';
+    src: url("./fonts/Goldplay-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'Goldplay-Regular';
+    src: url("./fonts/Goldplay-Regular.ttf");
+}
+@font-face {
+    font-family: 'Goldplay-SemiBold';
+    src: url("./fonts/Goldplay-SemiBold.ttf");
+}
+
+// ----------Variables----------
+
+// Shades
+$small-shade: 0 6px 20px 0 rgba(0, 0, 0, 0.05), 0 -2px 10px 0 rgba(0, 0, 0, 0.05);
+
+// Fonts
+$bold-font: 'Goldplay-Bold';
+$regular-font: 'Goldplay-Regular';
+$semibold-font: 'Goldplay-SemiBold';
+
+//Primary Colors
+$primary-color-green: #1F9C94;
+$primary-color-orange: #E65F36;
+$primary-color-yellow: #FCC23F;
+$primary-color-gray: #828282;
+
+// Neutral
+$white-color: #fff;
+$color-black: #0F0F0F;
+$neutral-color-white: #fbfbfb;
+$neutral-color-gray: #F6F6F6;
+
+// Secondary
+$secondary-color-yellow-600: #FFF8E1;
+$secondary-color-yellow-700: #FFD255;
+$secondary-color-gray-500: #EEEEEE;
+
+// Display Flex
+@mixin flex-display($flex-direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $flex-direction;
+}
+
+// Media Queries
+$mobile-queries: 1100px; 
+
+// Font Size
+$headline4: 28px;
+$text2: 18px;
+$text3: 16px;
+$text4: 14px;
+$caption: 12px;
+
+
+//Font size Mobile (mob)
+$mob-headline4: $headline4 - 2px;
+$mob-text2: $text2 - 2px;
+$mob-text3: $text3 - 2px;
+$mob-text4: $text4 - 2px;
+$mob-caption: $caption - 1px;
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    background-color: $neutral-color-white;
+}
+
+// Grid
+.dashboard-main{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 180px 100px 180px;
+    @media (max-width: $mobile-queries){
+        padding: 32px 10px 100px;
+    }
+}
+
+a{
+    font-family: $bold-font;
+    font-size: $text4;
+    color: $primary-color-green;
+    text-decoration: none;
+    @media (max-width: $mobile-queries){
+        font-size: $mob-text4;
+    }
+}
